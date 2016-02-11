@@ -1,6 +1,6 @@
 # Website Performance Optimization Project
 
-No build tools were used. 
+## Running the Application
 
 1. In the *src* directory, open *index.html* in your browser to
    see the old portfolio site.
