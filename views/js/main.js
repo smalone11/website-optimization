@@ -427,7 +427,6 @@ var resizePizzas = function(size) {
     var windowWidth = document.querySelector("#randomPizzas").offsetWidth;
     var oldSize = oldWidth / windowWidth;
 
-    // Optional TODO: change to 3 sizes? no more xl?
     // Changes the slider value to a percent width
     function sizeSwitcher (size) {
       switch(size) {
@@ -450,10 +449,17 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
-      var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
-      var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
+    //Added variables to help optimize the loop
+    var pizza = document.querySelectorAll(".randomPizzaContainer");
+    var length = pizza.length;
+
+    //Made calculations for the first pizza
+    var dx = determineDx(pizza[0], size);
+    var newwidth = (pizza[0].offsetWidth + dx) + 'px';
+
+    //Apply the change to all of the pizzas
+    for (var i = 0; i < length; i++) {
+      pizza[i].style.width = newwidth;
     }
   }
 
@@ -503,9 +509,13 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+
+  //Added variables to help optimize the loop
+  var top = document.body.scrollTop / 1250;
+  var length = items.length;
+
+  for (var i = 0; i < length; i++) {
+    items[i].style.left = items[i].basicLeft + 100 * Math.sin(top + (i % 5)) + 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
