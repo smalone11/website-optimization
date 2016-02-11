@@ -1,4 +1,4 @@
-## Website Performance Optimization portfolio project
+## Website Performance Optimization Project
 
 No build tools were used. 
 
