@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="overflow-y: scroll; -webkit-tap-highlight-color: rgba(0,0,0,0); -ms-text-size-adjust: 100%; -webkit-text-size-adjust: none;">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +8,27 @@
     <title>Cameron Pittman: Portfolio</title>
 
     <link href="css/print.css" rel="stylesheet" media="print">
+    <style>
+      html { overflow-y: scroll; -webkit-tap-highlight-color: rgba(0,0,0,0); -ms-text-size-adjust: 100%; -webkit-text-size-adjust: none; }
+
+      a { color: #12C; }
+      a:visited { color: #61C; }
+      a:focus { outline: thin dotted; }
+      a:hover, a:active { color: #c00; outline: 0; }
+
+      img { border: 0; max-width: 100%; float: left; }
+
+      header, footer, .container { max-width: 45em; margin: 0 auto; }
+
+      li img { padding-right: 1em; }
+      li p { font-size: 0.9em; font-style: italic; }
+
+      /* Smartphones (portrait) */
+      @media only screen and (max-width: 480px) {
+        body { font-size: 12px;}
+        header p { padding-left: 4.5em;}
+      }
+    </style>
 
     <script async>
       (function(w,g){w['GoogleAnalyticsObject']=g;
@@ -75,17 +96,5 @@
       <p>&copy; Web Performance 2014 <span id="crp-stats" style="float: right; font-style: italic;"></span></p>
     </footer>
     </div>
-
-    <script>
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = 'css/style.css';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
-    </script>
   </body>
 </html>
