@@ -11,7 +11,7 @@
 2. In the *dist* directory, open *index.html* in your browser to
    see the new portfolio site.
   1. You can once again click on *Cam's Pizzeria* to now see the 
-     new sire with faster load times and smoother scrolling.
+     new site with faster load times and smoother scrolling.
 
 ## Optimizations
 
@@ -20,8 +20,8 @@
 1. Moved over the JS code to index.html.
 2. Made any non-critical script asynchronous.
 3. Added a media attribute to the *print.css* link.
-4. Added a script at the end of *body* to load *style.css* to remove render blocking.
-5. Any css in *style.css* that was not used mutliple times was put inline in *index.html*.
+4. Any css in *style.css* that was not used mutliple times was put inline in *index.html*.
+5. Any additional css in *style.css* was moved into a style tag in the header of *index.html*.
 6. Removed extra, unnecessary *.html* files.
 7. Resized and compressed images.
 
