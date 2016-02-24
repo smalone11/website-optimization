@@ -2,16 +2,9 @@
 
 ## Running the Application
 
-1. In the *src* directory, open *index.html* in your browser to
-   see the old portfolio site.
-  1. You can also click on the last link on the page, Cam's
-     Pizzeria, to see the old site with slower load times and
-     lower fps while scrolling.
+1. In the *src* directory, open *index.html* in a web browser to see the old portfolio site. Clicking on the last link on the page will open the old version of Cam's Pizzeria.
 
-2. In the *dist* directory, open *index.html* in your browser to
-   see the new portfolio site.
-  1. You can once again click on *Cam's Pizzeria* to now see the 
-     new site with faster load times and smoother scrolling.
+2. In the *dist* directory, open *index.html* in a web browser to see the new portfolio site. Clicking on the last link will now open to the new version of Cam's Pizzeria.
 
 ## Optimizations
 
